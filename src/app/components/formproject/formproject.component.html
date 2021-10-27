@@ -1,0 +1,87 @@
+
+<div class="container">
+  <form clas="row" (ngSubmit)="addsubmit(forma)" #forma="ngForm">
+    <div class="col-md-10 container">
+      <div class="mb-3">
+        <label class="form-label">project name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="project"
+          #projectname="ngModel"
+          [ngModel]="form.projectname"
+          name="projectname"
+          minlength=6
+          required
+          [class.is-invalid]="projectname.invalid && projectname.touched"
+        />
+        <small *ngIf="projectname.invalid && projectname.touched" class="form-text text-danger">field is too short: must  contain more than 6 characters</small>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">description</label>
+        <input
+          class="form-control"
+          id="descrip"
+          #descript="ngModel"
+          [ngModel] ="form.descript"
+          name="descript"
+          required
+          minlength=10
+          [class.is-invalid]="descript.invalid && descript.touched"
+        />
+        <small *ngIf="descript.invalid && descript.touched" class="form-text text-danger">field is too short: must  contain more than 10 characters</small>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">project manager</label>
+        <select
+          class="form-select form-select-md"
+          #projectmanager="ngModel"
+          [ngModel] ="form.projectmanager"
+          name="projectmanager"
+          required
+          [class.is-invalid]="projectmanager.invalid && projectmanager.touched"
+        >
+          <option value="Franco Scio" selected>Franco Scio</option>
+          <option value="Gabriela Gonzales">Gabriela Gonzalez</option>
+          <small *ngIf="projectmanager.invalid && projectmanager.touched" class="form-text text-danger">project manager is required</small>
+        </select>
+        <small *ngIf="projectmanager.invalid && projectmanager.touched" class="form-text text-danger">project manager is required</small>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">asigned to</label>
+        <select
+          class="form-select form-select-md"
+          #asignedto="ngModel"
+          [ngModel] ="form.asignedto"
+          name="asignedto"
+          required
+          [class.is-invalid]="asignedto.invalid && asignedto.touched"
+        >
+          <option value="Ignacio Truffa"selected>Ignacio Truffa</option>
+          <option value="Lucas Silbermann">Lucas Silbermann</option>
+          <option value="Franco Catmull">Franco Catmull</option>
+        </select>
+        <small *ngIf="asignedto.invalid && asignedto.touched" class="form-text text-danger">the field is required</small>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">status</label>
+        <select
+          class="form-select form-select-md"
+          #status="ngModel"
+          [ngModel] ="form.status"
+          name="status"
+          required
+          [class.is-invalid]="status.invalid && status.touched"
+          
+        >
+          <option value="enabled" selected>Enabled</option>
+          <option value="disabled">Disabled</option>
+         
+        </select>
+        <small *ngIf="status.invalid && status.touched" class="form-text text-danger">the field is required</small>
+      </div>
+      <button  type="submit" class="btn btn-danger"><i class="far fa-save"></i> save</button>
+      
+    </div>
+  </form>
+</div>

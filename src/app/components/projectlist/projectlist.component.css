@@ -1,0 +1,98 @@
+.projectmain{
+    width: 70%;
+    margin:0px auto;
+    min-height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 0.5px solid rgb(228, 224, 224);
+    margin-top: 10px;
+}
+.data-project{
+    width: 100%;
+    height: 40%;
+    line-height: 10px;
+    margin-bottom: 5px;
+}
+.date{
+    font-size: 11px;
+    color:rgb(163, 158, 158);
+}
+.data-profile{
+    display: flex;
+    width: 100%;
+    height: 40%;
+    margin-top: 5px;
+    flex-wrap: wrap;
+    line-height: 40px;
+
+}
+.data-profile > img{
+    margin-right: 10px;
+}
+.header-project{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.title-project{
+width: 80%;
+}
+.options-dropdown{
+    position:relative;
+    cursor: pointer;
+    width: 20%;
+    
+}
+
+.options-dropdown > ul{
+    position:absolute;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 30ms;
+}
+.options-dropdown:hover > ul{
+    min-height: 70px;
+    width: 100px;
+    border-radius: 10px;
+    border: 0.5px solid #ccc;
+    padding:10px;
+
+}
+.options-dropdown > ul > li{
+    width: 100%;
+    margin-bottom: 10px;
+    text-decoration: none;
+    list-style: none;
+    line-height: 20px;
+    align-items: center;
+    
+}
+.options-dropdown > ul:hover > li:hover{
+ color: red;
+}
+.home-nav{
+    
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin:0px auto;
+    height: 40px;
+    align-items: center;
+}
+.containt-main{
+width: 100%;
+height: auto;
+ border-bottom: 0.5px solid rgb(228, 224, 224);
+padding-bottom: 5px;
+padding-top: 5px;
+}
+@media (max-width: 380px) {
+.projectmain {
+    width: 100%;
+}
+.options-dropdown{
+width: 35%;
+}
+
+    }

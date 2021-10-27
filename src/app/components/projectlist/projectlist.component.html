@@ -1,0 +1,33 @@
+<div class="containt-main">
+<nav class="home-nav">
+ <div><strong>My projects</strong> </div> 
+ <a class="btn btn-danger btn-sm"routerLink="/projects">+ add my project</a>
+</nav>
+</div>
+<div class="container">
+<div *ngFor="let project of projects">
+<div class="projectmain">
+<div class="data-project">
+<div class="header-project">
+    <div class="title-project">
+    <h5>{{project.projectname}}</h5>
+   </div>
+    <div class="options-dropdown">
+      <span class='fa fa-ellipsis-v' id></span>
+        <ul>
+          <li routerLink="/projects/edit/{{project.id}}" ><i class="far fa-edit"></i>Editar</li>
+          <li (click)="deleteproject(project)" ><i class="far fa-trash-alt"></i>eliminar</li>  
+        </ul>
+        </div>
+</div>
+
+
+<small class="date">{{project.date | date:'short'}}</small>
+</div>
+<div class="data-profile">
+<img src="../../../assets//images/profileimage1.png" width="40" height="40" alt="user-image" class="rounded-circle">
+<p>{{project.asignedto}}</p>
+</div>
+</div>
+</div>
+</div>
