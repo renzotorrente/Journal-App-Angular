@@ -1,5 +1,5 @@
 # Journal-App-Angular
-Challenge realizado con Angular agencia esto es 
+# Challenge realizado con Angular agencia esto es 
 Frontend challenge
 Se debe realizar el frontend de una plataforma que que tiene como objetivo realizar la gestión de proyectos. Si bien no hay restricción de tiempo, creemos que de 3 a 5 horas es un tiempo razonable para hacerlo calidad.
 
